@@ -102,3 +102,32 @@ function exploreProducts() {
   document.getElementById("products")
     .scrollIntoView({ behavior: "smooth" });
 }
+
+
+
+function renderCategories() {
+
+    const categoryContainer = document.getElementById("category-list");
+
+    if (!categoryContainer) return;
+
+    categoryContainer.innerHTML = MARKET_CATEGORIES.map(category => {
+
+        return `
+            <a class="category-card"
+               href="products.html?category=${category.id}">
+
+                <div class="category-icon">
+                    ${category.icon}
+                </div>
+
+                <b>${category.name}</b>
+
+                <p class="muted">Explore products</p>
+
+            </a>
+        `;
+
+    }).join("");
+
+}
