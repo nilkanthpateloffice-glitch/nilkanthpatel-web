@@ -127,7 +127,7 @@ function renderCategories() {
 
             </a>
         `;
-
+renderCategories();
     }).join("");
 
 }
